@@ -22,7 +22,7 @@ else:
     numeric_features_stds = [0.0, 1.99, 45.28, 7.7]         # Ganti dengan std asli
 
     class DummyScaler:
-    def _init(self, mean, scale):  # <-- Diperbaiki dari _init jadi _init_
+    def _init_(self, mean, scale):  # <- dua garis bawah, dan diberi indentasi
         self.mean_ = mean
         self.scale_ = scale
 
