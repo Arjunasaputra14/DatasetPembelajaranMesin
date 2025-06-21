@@ -1,6 +1,0 @@
-import joblib
-
-# Save the best Random Forest model
-joblib.dump(best_rf_model, 'best_rf_model.pkl')
-
-print("Best Random Forest model saved as 'best_rf_model.pkl'")
