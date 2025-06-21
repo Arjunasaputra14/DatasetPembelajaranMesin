@@ -129,4 +129,5 @@ if st.sidebar.button("Prediksi Risiko Stroke"):
     else:
         st.success(f"Pasien memiliki risiko rendah terkena stroke. (Probabilitas: {prediction_proba[0]:.2f})")
 
-    st.write("Catatan: Prediksi ini didasarkan pada model machine learning dan tidak menggantikan diagnosis medis profesion
+       st.write("Catatan: Prediksi ini didasarkan pada model machine learning dan tidak menggantikan diagnosis dari tenaga medis.")
+
