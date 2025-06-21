@@ -1,4 +1,4 @@
-
+%%writefile app.py
 import streamlit as st
 import pandas as pd
 import joblib
@@ -119,10 +119,9 @@ input_df[numeric_features] = scaler.transform(input_df[numeric_features])
 
 
 # Make prediction
-# Baris ke-121
 if st.sidebar.button("Prediksi Risiko Stroke"):
     prediction = model.predict(input_df)
-    prediction_proba = model.predict_proba(input_df)[:, 1]  # Probabilitas stroke
+    prediction_proba = model.predict_proba(input_df)[:, 1] # Probability of stroke
 
     st.subheader("Hasil Prediksi")
     if prediction[0] == 1:
@@ -130,8 +129,4 @@ if st.sidebar.button("Prediksi Risiko Stroke"):
     else:
         st.success(f"Pasien memiliki risiko rendah terkena stroke. (Probabilitas: {prediction_proba[0]:.2f})")
 
-    # Perbaikan: indentasi disesuaikan agar berada di dalam blok if-button
-    st.write("Catatan: Prediksi ini didasarkan pada model machine learning dan tidak menggantikan diagnosis dari tenaga medis.")
-
-
-
+    st.write("Catatan: Prediksi ini didasarkan pada model machine learning dan tidak menggantikan diagnosis medis profesional.")
